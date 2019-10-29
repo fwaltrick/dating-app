@@ -4,7 +4,9 @@
   "description": "Erasys JavaScript Trial Task",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index | bunyan"
+    "start": "node ./index | bunyan",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"**/*.{js,jsx}\" --quiet"
   },
   "author": "erasys GmbH",
   "license": "ISC",
@@ -15,7 +17,23 @@
     "bunyan": "^1.8.12",
     "express": "^4.16.3",
     "hashids": "^1.1.4",
-    "lodash": "^4.17.10",
-    "moment": "^2.22.2"
+    "lodash": "^4.17.15",
+    "moment": "^2.22.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.18.2"
   }
 }
