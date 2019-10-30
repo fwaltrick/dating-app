@@ -1,4 +1,4 @@
-async function getUsers(sort = 'ACTIVITY') {
+export async function getUsers(sort = 'ACTIVITY') {
   /// Fetching sorted users general information
   const response = await fetch(
     `http://localhost:3000/api/search?length=32&sorting=${sort}`

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./index | bunyan",
+    "dev": "parcel src/index.html",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"**/*.{js,jsx}\" --quiet"
   },
@@ -14,7 +15,9 @@
     "node": ">= 6"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "bunyan": "^1.8.12",
+    "cors": "^2.8.5",
     "express": "^4.16.3",
     "hashids": "^1.1.4",
     "lodash": "^4.17.15",
