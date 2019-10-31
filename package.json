@@ -23,7 +23,9 @@
     "lodash": "^4.17.15",
     "moment": "^2.22.2",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "react-icons": "^3.8.0",
+    "react-timeago": "^4.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",

@@ -8,7 +8,7 @@
     "prettier/react"
   ],
   "rules": {
-    "no-console": "warn"
+    "no-console": "off"
   },
   "plugins": ["react", "import", "jsx-a11y", "react-hooks"],
   "parser": "babel-eslint",

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { getUsers } from '../utils/api'
-import placeholderPic from '../img/placeholder-pic.jpg'
+import { ModeProvider } from '../context/mode'
+import Nav from './Nav'
 import 'babel-polyfill'
 
 export default class App extends Component {
@@ -14,36 +14,13 @@ export default class App extends Component {
     }
   }
 
-  //   static propTypes = {
-  //     prop: PropTypes
-  //   }
-
-  componentDidMount() {
-    this.updateSorting(this.state.activeOption)
-  }
-
-  updateSorting = activeOption => {
-    this.setState({
-      activeOption
-    })
-
-    getUsers(this.state.activeOption).then(users =>
-      this.setState({
-        users
-      })
-    )
-  }
-
   render() {
     const { users } = this.state
 
     return (
       <React.StrictMode>
         <ModeProvider value={this.state}>
-          <div className={this.state.theme}>
-            <Nav />
-            <CardGrid />
-          </div>
+          <Nav />
         </ModeProvider>
       </React.StrictMode>
     )
