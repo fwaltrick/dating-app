@@ -47,7 +47,7 @@ export default class CardGrid extends Component {
       <ModeConsumer>
         {({ mode, toggleMode }) => (
           <div className={`ctn-${mode}`}>
-            <div className={`container bg-${mode}`}>
+            <div className="container">
               <div className={`card-grid`}>
                 {this.stillLoading() && (
                   <h3 style={{ fontWeight: '300' }}>L O A D I N G ...</h3>

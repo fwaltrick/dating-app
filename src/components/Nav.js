@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import PropTypes from 'prop-types'
+import { FaMoon, FaSun } from 'react-icons/fa'
 import { ModeConsumer } from '../context/mode'
 import CardGrid from './CardGrid'
 
@@ -20,8 +20,8 @@ export default class Nav extends Component {
           <Fragment>
             <header className={`bg-${mode}`}>
               <nav>
-                <div className="container flex">
-                  <ul>
+                <div className="container flex space-between">
+                  <ul className="flex">
                     <li>
                       <a
                         className={
@@ -47,6 +47,17 @@ export default class Nav extends Component {
                       </a>
                     </li>
                   </ul>
+                  <button
+                    style={{ fontSize: 30 }}
+                    className="btn-fa"
+                    onClick={toggleMode}
+                  >
+                    {mode === 'dark' ? (
+                      <FaMoon color="#FFF" size={18} />
+                    ) : (
+                      <FaSun color="#FFF" size={18} />
+                    )}
+                  </button>
                 </div>
               </nav>
             </header>
